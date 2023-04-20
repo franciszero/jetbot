@@ -1,7 +1,7 @@
 import os
 
 DEFAULT_CAMERA = os.environ.get('JETBOT_DEFAULT_CAMERA', 'opencv_gst_camera')
-print(DEFAULT_CAMERA)
+
 if DEFAULT_CAMERA == 'zmq_camera':
     from .zmq_camera import ZmqCamera
     Camera = ZmqCamera

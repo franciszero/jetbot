@@ -21,7 +21,7 @@ then
 	    -p 8888:8888 \
 	    -v $WORKSPACE:/workspace \
 	    --workdir /workspace \
-	    --name=jetbot_jupyter1 \
+	    --name=jetbot_jupyter \
 	    --memory-swap=$JETBOT_JUPYTER_MEMORY_SWAP \
 	    --env JETBOT_DEFAULT_CAMERA=$JETBOT_CAMERA \
 	    $JETBOT_DOCKER_REMOTE/jetbot:jupyter-$JETBOT_VERSION-$L4T_VERSION
@@ -39,7 +39,7 @@ else
 	    -p 8888:8888 \
 	    -v $WORKSPACE:/workspace \
 	    --workdir /workspace \
-	    --name=jetbot_jupyter1 \
+	    --name=jetbot_jupyter \
 	    --memory=$JETBOT_JUPYTER_MEMORY \
 	    --memory-swap=$JETBOT_JUPYTER_MEMORY_SWAP \
 	    --env JETBOT_DEFAULT_CAMERA=$JETBOT_CAMERA \

@@ -21,8 +21,7 @@ class ZmqCamera(CameraBase):
     def __init__(self, *args, **kwargs):
         self.value = np.zeros((224, 224, 3), dtype=np.uint8)  # set default image
         super().__init__(self, *args, **kwargs)
-        self.width = 224
-        self.height = 224
+        
         self._running = False
         self._port = 1807
         self._image_shape = (224, 224, 3)

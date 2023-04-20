@@ -3,5 +3,5 @@ sudo docker run -it -d \
     --runtime nvidia \
     --network host \
     --privileged \
-    --name=jetbot_display1 \
+    --name=jetbot_display \
     $JETBOT_DOCKER_REMOTE/jetbot:display-$JETBOT_VERSION-$L4T_VERSION
