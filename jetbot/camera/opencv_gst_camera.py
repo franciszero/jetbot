@@ -20,21 +20,22 @@ class OpenCvGstCamera(CameraBase):
     def __init__(self, *args, **kwargs):
         self.value = np.empty((self.height, self.width, 3), dtype=np.uint8)
         super().__init__(self, *args, **kwargs)
-
-        try:
-            self.cap = cv2.VideoCapture(self._gst_str(), cv2.CAP_GSTREAMER)
-
+        print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+        '''try:
+            
+            self.cap = cv2.VideoCapture(0)#self._gst_str(), cv2.CAP_GSTREAMER)
+            
             re, image = self.cap.read()
 
             if not re:
-                raise RuntimeError('Could not read image from camera.')
+                raise RuntimeError('Coulasdfasdfasdfad not read image from camera.')
 
             self.value = image
             self.start()
         except:
             self.stop()
             raise RuntimeError(
-                'Could not initialize camera.  Please see error trace.')
+                'Could not initialize camera.  Please see error trace.')'''
 
         atexit.register(self.stop)
 
